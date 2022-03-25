@@ -3,30 +3,30 @@
         "id": "1",
         "name": "Violin",
         "price": 10000,
-        "img": "https://en.wikipedia.org/wiki/Violin#/media/File:Violin_VL100.png"
+        "img": "./images/1-violin.png"
     },
     {
         "id": "2",
         "name": "Guiter",
         "price": 4000,
-        "img": "https://en.wikipedia.org/wiki/Guitar#/media/File:GuitareClassique5.png"
+        "img": "./images/2-guiter.png"
     },
     {
         "id": "3",
         "name": "Cello",
         "price": 4000,
-        "img": "https://en.wikipedia.org/wiki/Cello#/media/File:Cello_front_side.png"
+        "img": "./images/3-cello.png"
     },
     {
         "id": "4",
         "name": "Harp",
         "price": 20000,
-        "img": "https://en.wikipedia.org/wiki/Harp#/media/File:Harp.png"
+        "img": "./images/4-Harp.png"
     },
     {
         "id": "5",
         "name": "Sitar",
         "price": 20000,
-        "img": "https://en.wikipedia.org/wiki/Sitar#/media/File:Sitar3.jpg"
+        "img": "./images/5-sitar.jpg"
     }
 ]
