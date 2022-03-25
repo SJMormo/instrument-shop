@@ -1,4 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import './Instrument.css'
 
 const Instrument = (props) => {
     const { name, price, img } = props.instrument;
@@ -11,11 +14,11 @@ const Instrument = (props) => {
                     <p>Price: {price}</p>
                 </div>
                 <div className="card-footer">
-                    {/* <div className="d-grid">
-                        <button onClick={() => props.setEventHandle(props.product)} className="btn mormo-btn" type="button">Add to Cart
+                    <div className="d-grid">
+                        <button onClick={() => props.setEventHandle(props.instrument)} className="btn modify-btn" type="button">Add to Cart
                             <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
                         </button>
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </div>

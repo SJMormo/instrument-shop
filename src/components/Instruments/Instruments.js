@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Cart from '../Cart/Cart';
 import Instrument from '../Instrument/Instrument';
 
 const Instruments = () => {
@@ -12,7 +13,12 @@ const Instruments = () => {
         fetch('instruments.json')
             .then(res => res.json())
             .then(data => setInstruments(data))
-    }, [])
+    }, []);
+
+    // button event handle works
+    const setEventHandle = selectedInstrument => {
+        console.log(selectedInstrument);
+    }
 
     return (
         <div className="row">
@@ -22,12 +28,13 @@ const Instruments = () => {
                         instruments.map(instrument => <Instrument
                             key={instrument.id}
                             instrument={instrument}
+                            setEventHandle={setEventHandle}
                         ></Instrument>)
                     }
                 </div>
             </div>
             <div className="col-2 cart-container">
-                {/* <Cart cart={cart}></Cart> */}
+                <Cart></Cart>
             </div>
         </div>
     );

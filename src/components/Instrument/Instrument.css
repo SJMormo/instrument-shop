@@ -1,0 +1,8 @@
+.modify-btn {
+    background-color: #FFE0B3;
+    font-weight: bold;
+}
+
+.modify-btn:hover {
+    background-color: orange;
+}
