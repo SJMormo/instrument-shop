@@ -24,9 +24,10 @@ const Instruments = () => {
         setCart(newCart);
     }
 
+
     return (
         <div className="row">
-            <div className="col-10">
+            <div className="col-8">
                 <div className="products-container row row-cols-1 row-cols-md-3 g-4">
                     {
                         instruments.map(instrument => <Instrument
@@ -37,10 +38,10 @@ const Instruments = () => {
                     }
                 </div>
             </div>
-            <div className="col-2 cart-container">
+            <div className="col-4 cart-container">
                 <Cart cart={cart}></Cart>
             </div>
-        </div>
+        </div >
     );
 };
 
