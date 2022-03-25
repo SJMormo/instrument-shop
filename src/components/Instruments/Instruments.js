@@ -15,9 +15,13 @@ const Instruments = () => {
             .then(data => setInstruments(data))
     }, []);
 
+    // cart
+    const [cart, setCart] = useState([]);
+
     // button event handle works
     const setEventHandle = selectedInstrument => {
-        console.log(selectedInstrument);
+        const newCart = [...cart, selectedInstrument];
+        setCart(newCart);
     }
 
     return (
@@ -34,7 +38,7 @@ const Instruments = () => {
                 </div>
             </div>
             <div className="col-2 cart-container">
-                <Cart></Cart>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
