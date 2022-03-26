@@ -38,7 +38,7 @@ const Instruments = () => {
 
 
     return (
-        <div className="row mt-5 w-100">
+        <div className="row mt-5 w-100 ms-md-5">
             <div className="col-8">
                 <div className="products-container row row-cols-1 row-cols-md-3 g-4">
                     {

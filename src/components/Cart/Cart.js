@@ -25,12 +25,14 @@ const Cart = (props) => {
     return (
         <div className="cart">
 
-            <h3>Selected Instruments</h3>
+            <h3 className="text-center">Selected Instruments</h3>
             {
                 cart.map(items => <SelectedInstruments key={items.id} cartItems={items}></SelectedInstruments>)
             }
 
-            <button onClick={() => getRandomNumber(0, cart.length - 1)} className="btn modify-btn mt-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Choose One For me</button>
+            <div className="d-flex justify-content-center">
+                <button onClick={() => getRandomNumber(0, cart.length - 1)} className="btn modify-btn mt-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Choose One For me</button>
+            </div>
 
             <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div className="offcanvas-header">
@@ -41,7 +43,7 @@ const Cart = (props) => {
                     <h4>{choose}</h4>
                 </div>
             </div>
-            <div className="mt-3">
+            <div className="mt-3 d-flex justify-content-center">
                 <button onClick={resetCart} className="btn modify-btn" type="button">Choose Again</button>
             </div>
         </div >
