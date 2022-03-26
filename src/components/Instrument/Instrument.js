@@ -7,7 +7,7 @@ const Instrument = (props) => {
     const { name, price, img } = props.instrument;
     return (
         <div className="col">
-            <div className="card h-100">
+            <div className="card h-100 shadow">
                 <img src={img} className="card-img-top img-fluid modify-img" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>

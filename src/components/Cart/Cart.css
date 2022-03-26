@@ -1,4 +1,6 @@
 .cart {
     position: sticky;
     top: 0;
+    background-color:rgba(228, 243, 243, 0.425);
+    border-radius: 2%;
 }

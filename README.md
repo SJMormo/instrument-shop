@@ -1,2 +1,2 @@
 # **Lucky-one-SJMormo**
-## Live Site link: https://github.com/facebook/create-react-app
+## Live Site link: https://lucky-one-sjmormo.netlify.app/

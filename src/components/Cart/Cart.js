@@ -23,9 +23,9 @@ const Cart = (props) => {
     }
 
     return (
-        <div className="cart">
+        <div className="cart shadow">
 
-            <h3 className="text-center">Selected Instruments</h3>
+            <h3 className="text-center pt-3">Selected Instruments</h3>
             {
                 cart.map(items => <SelectedInstruments key={items.id} cartItems={items}></SelectedInstruments>)
             }
@@ -43,10 +43,10 @@ const Cart = (props) => {
                     <h4>{choose}</h4>
                 </div>
             </div>
-            <div className="mt-3 d-flex justify-content-center">
+            <div className="mt-3 d-flex justify-content-center pb-3">
                 <button onClick={resetCart} className="btn modify-btn" type="button">Choose Again</button>
             </div>
-        </div >
+        </div>
     );
 };
 
