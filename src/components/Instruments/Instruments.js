@@ -24,6 +24,11 @@ const Instruments = () => {
         setCart(newCart);
     }
 
+    // reset
+    const resetCart = () => {
+        setCart([]);
+    }
+
 
     return (
         <div className="row">
@@ -39,7 +44,7 @@ const Instruments = () => {
                 </div>
             </div>
             <div className="col-4 cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart} resetCart={resetCart}></Cart>
             </div>
         </div >
     );

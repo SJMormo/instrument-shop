@@ -2,19 +2,23 @@ import React from 'react';
 import { useState } from 'react';
 import SelectedInstruments from '../SelectedInstruments/SelectedInstruments';
 
-const Cart = ({ cart }) => {
+const Cart = (props) => {
+    // destructuring
+    const { cart, resetCart } = props;
 
     // choose one for me
-    let showOnUI;
-    const [choose, setChoose] = useState('Click Again Please');
-    console.log(cart);
+    const [choose, setChoose] = useState('Add Instruments to the cart first');
 
     const getRandomNumber = (min, max) => {
         min = Math.ceil(min);
         max = Math.floor(max);
-        const random = Math.floor(Math.random() * (max - min + 1) + min);
-        // console.log();
-        setChoose(cart[random].name);
+        if (max === -1) {
+            setChoose('Add Instruments to the cart first');
+        }
+        else {
+            const random = Math.floor(Math.random() * (max - min + 1) + min);
+            setChoose(cart[random].name);
+        }
     }
 
     return (
@@ -25,7 +29,7 @@ const Cart = ({ cart }) => {
                 cart.map(items => <SelectedInstruments key={items.id} cartItems={items}></SelectedInstruments>)
             }
 
-            <button onClick={() => getRandomNumber(0, cart.length)} className="btn modify-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Choose One For me</button>
+            <button onClick={() => getRandomNumber(0, cart.length - 1)} className="btn modify-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Choose One For me</button>
 
             <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div className="offcanvas-header">
@@ -35,6 +39,9 @@ const Cart = ({ cart }) => {
                 <div className="offcanvas-body">
                     <h4>{choose}</h4>
                 </div>
+            </div>
+            <div className="mt-3">
+                <button onClick={resetCart} className="btn modify-btn" type="button">Choose Again</button>
             </div>
         </div >
     );
