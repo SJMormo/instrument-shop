@@ -1,10 +1,12 @@
 import React from 'react';
+import './selectedInstruments.css';
 
 const SelectedInstruments = (props) => {
-    const { name } = props.cartItems;
+    const { name, img } = props.cartItems;
     return (
-        <div>
-            <p>{name}</p>
+        <div className="selected-instruments mt-3 d-flex align-items-center">
+            <img src={img} className="img-fluid" alt="" />
+            <p className="ps-3">{name}</p>
         </div>
     );
 };

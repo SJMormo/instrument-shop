@@ -3,7 +3,7 @@
         "id": "1",
         "name": "Violin",
         "price": 10000,
-        "img": "./images/1-violin.png"
+        "img": "./images/1-violin.jfif"
     },
     {
         "id": "2",
@@ -21,12 +21,36 @@
         "id": "4",
         "name": "Harp",
         "price": 20000,
-        "img": "./images/4-Harp.png"
+        "img": "./images/4-Harp.jpg"
     },
     {
         "id": "5",
         "name": "Sitar",
         "price": 20000,
         "img": "./images/5-sitar.jpg"
+    },
+    {
+        "id": "6",
+        "name": "Grand Piano",
+        "price": 120000,
+        "img": "./images/6-grand-piano.jpg"
+    },
+    {
+        "id": "7",
+        "name": "Key-Board",
+        "price": 25000,
+        "img": "./images/7-keyboard.jpg"
+    },
+    {
+        "id": "8",
+        "name": "Drum Set",
+        "price": 30000,
+        "img": "./images/8-drums.jpg"
+    },
+    {
+        "id": "9",
+        "name": "Flute",
+        "price": 800,
+        "img": "./images/9-flute.png"
     }
 ]

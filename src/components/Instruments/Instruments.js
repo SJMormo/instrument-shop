@@ -20,8 +20,15 @@ const Instruments = () => {
 
     // button event handle works
     const setEventHandle = selectedInstrument => {
-        const newCart = [...cart, selectedInstrument];
-        setCart(newCart);
+        // check existance
+        const exists = cart.find(instrument => instrument.id === selectedInstrument.id);
+        if (exists) {
+            alert('Already added in the cart');
+        }
+        else {
+            const newCart = [...cart, selectedInstrument];
+            setCart(newCart);
+        }
     }
 
     // reset
@@ -31,7 +38,7 @@ const Instruments = () => {
 
 
     return (
-        <div className="row">
+        <div className="row mt-5 w-100">
             <div className="col-8">
                 <div className="products-container row row-cols-1 row-cols-md-3 g-4">
                     {

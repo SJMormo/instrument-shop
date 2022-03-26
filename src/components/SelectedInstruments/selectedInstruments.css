@@ -1,0 +1,5 @@
+.selected-instruments img {
+    width: 10%;
+    border: solid 2px black;
+    border-radius: 150px;
+}

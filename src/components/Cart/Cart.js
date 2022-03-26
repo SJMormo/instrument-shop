@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import SelectedInstruments from '../SelectedInstruments/SelectedInstruments';
+import './Cart.css';
 
 const Cart = (props) => {
     // destructuring
@@ -22,14 +23,14 @@ const Cart = (props) => {
     }
 
     return (
-        <div className="cart mt-5 pt-5">
+        <div className="cart">
 
             <h3>Selected Instruments</h3>
             {
                 cart.map(items => <SelectedInstruments key={items.id} cartItems={items}></SelectedInstruments>)
             }
 
-            <button onClick={() => getRandomNumber(0, cart.length - 1)} className="btn modify-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Choose One For me</button>
+            <button onClick={() => getRandomNumber(0, cart.length - 1)} className="btn modify-btn mt-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Choose One For me</button>
 
             <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div className="offcanvas-header">
